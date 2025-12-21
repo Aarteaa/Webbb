@@ -35,8 +35,8 @@ const Projects = () => {
               transition={{ duration: 0.5 }}
               className="w-full max-w-xl lg:w-3/4"
             >
-              <h6 className="mb-4 text-3xl font-semibold text-purple-400">{Project.title}</h6>
-              <p className="mb-6 text-xl text-neutral-300">{Project.description}</p>
+              <h6 className="mb-4 text-3xl font-Semibold text-purple-400">{Project.title}</h6>
+              <p className="mb-6 text-xl font-Semibold text-dark-300">{Project.description}</p>
               <div className="flex flex-wrap gap-2">
                 {Project.technologies.map((tech, index) => (
                   <span

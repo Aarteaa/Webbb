@@ -1,134 +1,122 @@
-import { CONTACT } from "../constants";
 import { motion } from "framer-motion";
-import { useState } from "react";
-import emailjs from 'emailjs-com';
+import { FaEnvelope, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
-  const [status, setStatus] = useState("");
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({ ...prevData, [name]: value }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    
-    emailjs.send(
-      'service_fyr962r', // Replace with your EmailJS service ID
-      'template_aw2kwra', // Replace with your EmailJS template ID
-      formData,
-      'hSbvdswraDwpnAg-H' // Replace with your EmailJS user ID
-    ).then(() => {
-      setStatus("Message sent successfully!");
-      setFormData({ name: "", email: "", message: "" });
-    }).catch(() => {
-      setStatus("Failed to send message. Please try again later.");
-    });
-  };
-
   return (
-    <div className="border-b border-neutral-900 py-20 flex justify-center items-center">
-      <div className="flex flex-wrap w-full max-w-4xl">
+    <section className="border-b border-neutral-900 py-20">
+      <div className="max-w-5xl mx-auto px-6">
+
+        {/* Heading */}
+        {/* Section Header */}
+<motion.div
+  initial={{ opacity: 0, y: 20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  className="text-center mb-12"
+>
+  <h2 className="text-4xl md:text-5xl font-light tracking-tight text-purple-700">
+    Let’s Connect
+  </h2>
+
+  {/* soft underline */}
+  <div className="mx-auto mt-4 h-[3px] w-20 rounded-full bg-gradient-to-r from-purple-400 to-pink-400" />
+
+  {/* subtitle */}
+  <p className="mt-6 text-lg text-neutral-600 max-w-xl mx-auto">
+    Open to conversations around data, analytics, business problems,
+    collaborations, and opportunities.
+  </p>
+</motion.div>
+
+
         <motion.div
-          className="w-full md:w-1/2 p-6 bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 text-white rounded-lg shadow-lg"
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          initial={{ opacity: 0, y: 50 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="grid grid-cols-1 md:grid-cols-2 gap-10"
         >
-          <h2 className="text-4xl font-bold tracking-wide text-center mb-6">Get in Touch</h2>
-          <p className="text-center tracking-tight mb-4 text-lg text-white/80">{CONTACT.address}</p>
-          <p className="text-center tracking-tight mb-4 text-lg text-white/80">{CONTACT.phoneNo}</p>
-          <a
-            href={`mailto:${CONTACT.email}`}
-            className="block text-center my-4 text-lg font-medium text-white border-b-2 border-transparent hover:border-white"
-          >
-            {CONTACT.email}
-          </a>
-          <div className="mt-12 flex justify-center space-x-8">
-            {/* Social icons remain unchanged */}
+
+          {/* LEFT – Contact Info */}
+          <div className="flex flex-col justify-center gap-6">
+            <p className="text-lg text-neutral-600">
+              I’d love to connect, collaborate, or discuss opportunities related
+              to data, analytics, or business problem-solving.
+            </p>
+
+            <div className="space-y-3 text-neutral-700">
+              <p>📞 +91 9324882076</p>
+              <p>✉️ artinavale05@gmail.com</p>
+            </div>
+
+            <div className="flex gap-5 mt-4">
+              <motion.a
+                whileHover={{ scale: 1.15 }}
+                href="mailto:artinavale05@gmail.com"
+                className="text-2xl text-purple-500"
+              >
+                <FaEnvelope />
+              </motion.a>
+
+              <motion.a
+                whileHover={{ scale: 1.15 }}
+                href="https://linkedin.com"
+                target="_blank"
+                className="text-2xl text-purple-500"
+              >
+                <FaLinkedin />
+              </motion.a>
+
+              <motion.a
+                whileHover={{ scale: 1.15 }}
+                href="https://instagram.com"
+                target="_blank"
+                className="text-2xl text-purple-500"
+              >
+                <FaInstagram />
+              </motion.a>
+            </div>
           </div>
-          <div className="mt-12 flex justify-center space-x-8">
-  <a
-    href="mailto:prathamchintrate@gmail.com"
-    className="hover:scale-110 transform transition duration-300 ease-out"
-  >
-    <img src="https://img.icons8.com/ios-filled/50/ffffff/mail.png" alt="Mail" />
-  </a>
-  {/* <a href="#" className="hover:scale-110 transform transition duration-300 ease-out">
-    <img src="https://img.icons8.com/ios-filled/50/ffffff/twitter.png" alt="Twitter" />
-  </a> */}
-  <a
-    href="https://www.linkedin.com/in/pratham-chintrate-9a9a0b227/"
-    className="hover:scale-110 transform transition duration-300 ease-out"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn" />
-  </a>
-  <a
-    href="https://www.instagram.com/pratham.__.0/"
-    className="hover:scale-110 transform transition duration-300 ease-out"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <img src="https://img.icons8.com/ios-filled/50/ffffff/instagram.png" alt="Instagram" />
-  </a>
-</div>
-        </motion.div>
 
-        <motion.div
-          className="w-full md:w-1/2 p-6 bg-neutral-800 text-white rounded-lg shadow-lg"
-          whileInView={{ opacity: 1, x: 0 }}
-          initial={{ opacity: 0, x: -50 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-        >
-          <form onSubmit={handleSubmit} className="flex flex-col">
-            <label htmlFor="name" className="mb-2 text-lg">Name:</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              className="mb-4 p-2 rounded bg-neutral-700 border border-neutral-600"
-              required
-            />
+          {/* RIGHT – Contact Form */}
+          <form className="bg-white/70 backdrop-blur-md p-8 rounded-3xl shadow-sm space-y-6">
 
-            <label htmlFor="email" className="mb-2 text-lg">Email:</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              className="mb-4 p-2 rounded bg-neutral-700 border border-neutral-600"
-              required
-            />
+            <div>
+              <input
+                type="text"
+                placeholder="Your Name"
+                className="w-full rounded-xl border border-neutral-300 px-4 py-3 focus:outline-none focus:border-purple-400"
+              />
+            </div>
 
-            <label htmlFor="message" className="mb-2 text-lg">Message:</label>
-            <textarea
-              id="message"
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              rows="4"
-              className="mb-4 p-2 rounded bg-neutral-700 border border-neutral-600"
-              required
-            />
+            <div>
+              <input
+                type="email"
+                placeholder="Your Email"
+                className="w-full rounded-xl border border-neutral-300 px-4 py-3 focus:outline-none focus:border-purple-400"
+              />
+            </div>
 
-            <button
-              type="submit"
-              className="mt-4 p-2 bg-purple-600 hover:bg-purple-700 rounded text-lg font-bold text-white"
+            <div>
+              <textarea
+                rows="4"
+                placeholder="Your Message"
+                className="w-full rounded-xl border border-neutral-300 px-4 py-3 focus:outline-none focus:border-purple-400 resize-none"
+              />
+            </div>
+
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="w-full rounded-xl bg-purple-500 py-3 text-white font-medium"
             >
-              Submit
-            </button>
+              Send Message
+            </motion.button>
+
           </form>
-          {status && <p className="mt-4 text-center text-lg">{status}</p>}
         </motion.div>
       </div>
-    </div>
+    </section>
   );
 };
 
