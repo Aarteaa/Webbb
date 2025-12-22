@@ -98,8 +98,7 @@ export const PROJECTS = [
     title: "bank-stress-testing",
     image: project5,
     description:
-      " Developed ML-based stress testing framework using Random Forest and Gradient Boosting (R² = 0.95).Predicted NPL ratios under 4 economic scenarios with Basel III compliance.Built interactive Streamlit dashboard deployed on cloud",
-      "https://bank-stress-testing.streamlit.app/",
+      " Developed ML-based stress testing framework using Random Forest and Gradient Boosting (R² = 0.95).Predicted NPL ratios under 4 economic scenarios with Basel III compliance.Built interactive Streamlit dashboard deployed on cloud, website link  https://bank-stress-testing.streamlit.app/",
     technologies: ["Python", "ML", "Scikit-learn", "Streamlit"],
   },
 ];
