@@ -94,6 +94,14 @@ export const PROJECTS = [
       "Developed an end-to-end labor forecasting and optimization workflow using Python and SQL. Performed data preprocessing, exploratory analysis, predictive modeling, and KPI reporting to improve workforce allocation and operational efficiency.",
     technologies: ["Python", "Pandas", "SQL", "Data Analytics"],
   },
+  {
+    title: "bank-stress-testing",
+    image: project5,
+    description:
+      " Developed ML-based stress testing framework using Random Forest and Gradient Boosting (R² = 0.95).Predicted NPL ratios under 4 economic scenarios with Basel III compliance.Built interactive Streamlit dashboard deployed on cloud",
+      "https://bank-stress-testing.streamlit.app/",
+    technologies: ["Python", "ML", "Scikit-learn", "Streamlit"],
+  },
 ];
 
 

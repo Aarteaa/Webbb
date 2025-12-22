@@ -44,7 +44,7 @@ const Navbar = () => {
 
           {/* Instagram */}
           <a
-            href="https://www.instagram.com/Rteaaa/"
+            href="https://www.instagram.com//"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
