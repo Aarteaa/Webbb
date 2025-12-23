@@ -19,16 +19,15 @@ const Projects = () => {
               whileInView={{ opacity: 1, x: 0 }}
               initial={{ opacity: 0, x: -100 }}
               transition={{ duration: 0.5 }}
-              className="w-full lg:w-1/4"
+              className="w-full lg:w-1/3 flex justify-center"
             >
-              <img
-                src={Project.image}
-                width={150}
-                height={150}
-                alt={Project.title}
-                className="mb-6 round"
-              />
-            </motion.div>
+             <img
+              src={Project.image}
+              alt={Project.title}
+              className="mb-6 w-full max-w-sm rounded-xl object-cover shadow-lg"
+            />
+           </motion.div>
+
             <motion.div
               whileInView={{ opacity: 1, x: 0 }}
               initial={{ opacity: 0, x: 100 }}
