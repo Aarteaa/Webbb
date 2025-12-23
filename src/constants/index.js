@@ -6,6 +6,9 @@ import project5 from "../assets/projects/project-5.jpg";
 import project6 from "../assets/projects/project-6.jpg";
 import project7 from "../assets/projects/project-7.jpg";
 import project8 from "../assets/projects/project-8.jpg";
+import color from "/decor/Color.jpg";
+import Bank from "/decor/Bank.jpg";
+import chain from "/decor/chain.jpg";
 import project9 from "../assets/projects/project-9.jpg";
 
 
@@ -31,7 +34,7 @@ I have applied data science techniques to forecasting and performance-analysis u
 
 Check out my resume here:
 <span style="display: inline-block;">
-  <a href="https://drive.google.com/file/d/1YY7F7LJFBGDPAe9szekUPs7qIJ-4wot4/view?usp=sharing" target="_blank"
+  <a href="https://drive.google.com/drive/u/0/folders/1dhqHWKlbJTNnOWmHyNAHvzxJnO0wpSsL" target="_blank"
     style="text-decoration: underline; font-weight: bold;">
     Resume
   </a>
@@ -81,6 +84,20 @@ export const EXPERIENCES = [
 
 export const PROJECTS = [
   {
+    title: "PaletteIQ",
+    image: color,
+    description:
+      " Implemented facial skin segmentation and Hue–Value–Chroma based skin tone classification aligned with professional colour analysis theory.",
+    technologies: ["K-means clustering","MediaPipe", "Computer Vision","Color Processing","HSV/LAB analysis","Python", "ML", "Scikit-learn", "Streamlit"],
+  },
+  {
+    title: "Bank stress testing Model",
+    image: Bank,
+    description:
+      " Developed ML-based stress testing framework using Random Forest and Gradient Boosting (R² = 0.95).Predicted NPL ratios under 4 economic scenarios with Basel III compliance.Built interactive Streamlit dashboard deployed on cloud, website link  https://bank-stress-testing.streamlit.app/",
+    technologies: ["Python", "ML", "Scikit-learn", "Streamlit"],
+  },
+  {
     title: "Finanseer",
     image: project7,
     description:
@@ -89,17 +106,10 @@ export const PROJECTS = [
   },
   {
     title: "Labor Supply Chain Management System",
-    image: project5,
+    image: chain,
     description:
       "Developed an end-to-end labor forecasting and optimization workflow using Python and SQL. Performed data preprocessing, exploratory analysis, predictive modeling, and KPI reporting to improve workforce allocation and operational efficiency.",
     technologies: ["Python", "Pandas", "SQL", "Data Analytics"],
-  },
-  {
-    title: "bank-stress-testing",
-    image: project5,
-    description:
-      " Developed ML-based stress testing framework using Random Forest and Gradient Boosting (R² = 0.95).Predicted NPL ratios under 4 economic scenarios with Basel III compliance.Built interactive Streamlit dashboard deployed on cloud, website link  https://bank-stress-testing.streamlit.app/",
-    technologies: ["Python", "ML", "Scikit-learn", "Streamlit"],
   },
 ];
 
