@@ -11,7 +11,9 @@ const Contact = () => {
   };
 
   return (
-    <section className="border-b border-neutral-900 py-20">
+    <section className="border-b border-neutral-900 py-20"
+      onClick={(e) => e.stopPropagation()}
+    >
       <div className="max-w-5xl mx-auto px-6">
 
         {/* HEADER */}
