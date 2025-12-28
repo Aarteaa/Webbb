@@ -1,66 +1,56 @@
-import { PROJECTS } from "../constants";
-import { motion } from "framer-motion";
+import color from "../assets/color.png";
+import Bank from "../assets/bank.png";
+import project7 from "../assets/finanseer.png";
+import chain from "../assets/chain.png";
 
-const Projects = () => {
-  return (
-    <div className="border-b border-neutral-900 pb-4">
-      <motion.h2
-        whileInView={{ opacity: 1, y: 0 }}
-        initial={{ opacity: 0, y: -100 }}
-        transition={{ duration: 0.5 }}
-        className="my-20 text-center text-6xl"
-      >
-        Projects
-      </motion.h2>
-      <div>
-        {PROJECTS.map((Project, index) => (
-          <div key={index} className="mb-16 flex flex-wrap lg:justify-center">
-              <motion.div
-                whileInView={{ opacity: 1, x: 0 }}
-                initial={{ opacity: 0, x: -100 }}
-                transition={{ duration: 0.5 }}
-                className="w-full lg:w-1/2 flex justify-center"
-              >
-              <img
-                src={Project.image}
-                alt={Project.title}
-                className="mb-8 w-full max-w-lg rounded-2xl object-cover shadow-2xl"
-              />
-            </motion.div>
-
-            <motion.div
-              whileInView={{ opacity: 1, x: 0 }}
-              initial={{ opacity: 0, x: 100 }}
-              transition={{ duration: 0.5 }}
-              className="w-full max-w-xl lg:w-3/4"
-            >
-              <h6 className="mb-4 text-3xl font-Semibold text-purple-400">{Project.title}</h6>
-              <p className="mb-6 text-xl font-Semibold text-dark-300">{Project.description}</p>
-              <div className="flex flex-wrap gap-2">
-                {Project.technologies.map((tech, index) => (
-                  <span
-                    key={index}
-                    className="mr-2 rounded bg-neutral-800/50 px-4 py-2 text-lg font-medium text-purple-400"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-              {/* <a
-                href={Project.link} // Assuming each project has a link property
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block mt-2 text-blue-500 hover:underline"
-              >
-                Learn More
-              </a> */}
-            </motion.div>
-          </div>
-        ))}
-        <div />
-      </div>
-    </div>
-  );
-};
-
-export default Projects;
+export const PROJECTS = [
+  {
+    title: "PaletteIQ",
+    image: color,
+    live: "https://paletteiq.streamlit.app",
+    github: "https://github.com/Aarteaa/PaletteIQ",
+    description:
+      "AI-powered fashion color analysis platform using MediaPipe and OpenCV. Implements lighting-robust skin tone analysis using HSV/LAB color spaces and Hue–Value–Chroma theory.",
+    technologies: [
+      "MediaPipe",
+      "OpenCV",
+      "HSV/LAB",
+      "K-Means",
+      "Computer Vision",
+      "Streamlit",
+    ],
+  },
+  {
+    title: "Bank Stress Testing ML Model",
+    image: Bank,
+    live: "https://bank-stress-testing.streamlit.app",
+    github: "https://github.com/Aarteaa/bank-stress-testing",
+    description:
+      "ML-based stress testing framework using Random Forest and Gradient Boosting (R² = 0.95), simulating NPL ratios under Basel III aligned macroeconomic scenarios.",
+    technologies: [
+      "Random Forest",
+      "Gradient Boosting",
+      "ML",
+      "Basel III",
+      "Streamlit",
+    ],
+  },
+  {
+    title: "Finanseer",
+    image: project7,
+    github: null, // no public link yet
+    live: null,
+    description:
+      "Full-stack personal finance management application with expense tracking, budgeting, and ML-based expense trend forecasting.",
+    technologies: ["React", "Python", "Machine Learning", "MongoDB"],
+  },
+  {
+    title: "Labor Supply Chain Management",
+    image: chain,
+    live: "https://github.com/Aarteaa/labor-supply-chain-management",
+    github: "https://github.com/Aarteaa/labor-supply-chain-management",
+    description:
+      "End-to-end labor forecasting and optimization system using Python, SQL, and analytics-driven KPI reporting.",
+    technologies: ["Python", "Pandas", "SQL", "Data Analytics"],
+  },
+];
