@@ -1,56 +1,70 @@
-import color from "../assets/color.png";
-import Bank from "../assets/bank.png";
-import project7 from "../assets/finanseer.png";
-import chain from "../assets/chain.png";
+import { PROJECTS } from "../constants";
+import { motion } from "framer-motion";
 
-export const PROJECTS = [
-  {
-    title: "PaletteIQ",
-    image: color,
-    live: "https://paletteiq.streamlit.app",
-    github: "https://github.com/Aarteaa/PaletteIQ",
-    description:
-      "AI-powered fashion color analysis platform using MediaPipe and OpenCV. Implements lighting-robust skin tone analysis using HSV/LAB color spaces and Hue–Value–Chroma theory.",
-    technologies: [
-      "MediaPipe",
-      "OpenCV",
-      "HSV/LAB",
-      "K-Means",
-      "Computer Vision",
-      "Streamlit",
-    ],
-  },
-  {
-    title: "Bank Stress Testing ML Model",
-    image: Bank,
-    live: "https://bank-stress-testing.streamlit.app",
-    github: "https://github.com/Aarteaa/bank-stress-testing",
-    description:
-      "ML-based stress testing framework using Random Forest and Gradient Boosting (R² = 0.95), simulating NPL ratios under Basel III aligned macroeconomic scenarios.",
-    technologies: [
-      "Random Forest",
-      "Gradient Boosting",
-      "ML",
-      "Basel III",
-      "Streamlit",
-    ],
-  },
-  {
-    title: "Finanseer",
-    image: project7,
-    github: null, // no public link yet
-    live: null,
-    description:
-      "Full-stack personal finance management application with expense tracking, budgeting, and ML-based expense trend forecasting.",
-    technologies: ["React", "Python", "Machine Learning", "MongoDB"],
-  },
-  {
-    title: "Labor Supply Chain Management",
-    image: chain,
-    live: "https://github.com/Aarteaa/labor-supply-chain-management",
-    github: "https://github.com/Aarteaa/labor-supply-chain-management",
-    description:
-      "End-to-end labor forecasting and optimization system using Python, SQL, and analytics-driven KPI reporting.",
-    technologies: ["Python", "Pandas", "SQL", "Data Analytics"],
-  },
-];
+const Projects = () => {
+  return (
+    <div className="border-b border-neutral-900 pb-4">
+      <motion.h2
+        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: -100 }}
+        transition={{ duration: 0.5 }}
+        className="my-20 text-center text-6xl"
+      >
+        Projects
+      </motion.h2>
+
+      {PROJECTS.map((project, index) => (
+        <div key={index} className="mb-20 flex flex-wrap lg:justify-center">
+          {/* IMAGE */}
+          <motion.div
+            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: -100 }}
+            transition={{ duration: 0.5 }}
+            className="w-full lg:w-1/2 flex justify-center"
+          >
+            <img
+              src={project.image}
+              alt={project.title}
+              className="mb-8 w-full max-w-xl rounded-2xl object-cover shadow-2xl"
+            />
+          </motion.div>
+
+          {/* CONTENT */}
+          <motion.div
+            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: 100 }}
+            transition={{ duration: 0.5 }}
+            className="w-full lg:w-1/2 px-6"
+          >
+            {/* CLICKABLE TITLE */}
+            <a
+              href={project.live || project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mb-4 inline-block text-3xl font-semibold text-purple-400 hover:underline hover:text-purple-300 transition"
+            >
+              {project.title}
+            </a>
+
+            <p className="mb-6 text-xl text-neutral-300">
+              {project.description}
+            </p>
+
+            <div className="flex flex-wrap gap-2">
+              {project.technologies.map((tech, i) => (
+                <span
+                  key={i}
+                  className="rounded bg-neutral-800/50 px-4 py-2 text-lg text-purple-400"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default Projects;

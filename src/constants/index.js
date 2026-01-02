@@ -82,44 +82,52 @@ export const EXPERIENCES = [
    PROJECTS SECTION
 =========================== */
 
+import color from "../assets/color.png";
+import Bank from "../assets/bank.png";
+import project7 from "../assets/finanseer.png";
+import chain from "../assets/chain.png";
+
 export const PROJECTS = [
   {
     title: "PaletteIQ",
     image: color,
+    live: "https://paletteiq.streamlit.app",
+    github: "https://github.com/Aarteaa/PaletteIQ",
     description:
-      " Implemented facial skin segmentation and Hue–Value–Chroma based skin tone classification aligned with professional colour analysis theory.",
-    technologies: ["K-means clustering","MediaPipe", "Computer Vision","Color Processing","HSV/LAB analysis","Python", "ML", "Scikit-learn", "Streamlit"],
+      "Implemented facial skin segmentation and Hue–Value–Chroma based skin tone classification aligned with professional colour analysis theory.",
+    technologies: [
+      "K-means clustering",
+      "MediaPipe",
+      "Computer Vision",
+      "HSV/LAB",
+      "Python",
+      "ML",
+      "Streamlit",
+    ],
   },
   {
-    title: "Bank stress testing Model",
+    title: "Bank Stress Testing Model",
     image: Bank,
+    live: "https://bank-stress-testing.streamlit.app",
+    github: "https://github.com/Aarteaa/bank-stress-testing",
     description:
-      " Developed ML-based stress testing framework using Random Forest and Gradient Boosting (R² = 0.95).Predicted NPL ratios under 4 economic scenarios with Basel III compliance.Built interactive Streamlit dashboard deployed on cloud, website link  https://bank-stress-testing.streamlit.app/",
+      "Developed ML-based stress testing framework using Random Forest and Gradient Boosting (R² = 0.95).",
     technologies: ["Python", "ML", "Scikit-learn", "Streamlit"],
   },
   {
     title: "Finanseer",
     image: project7,
+    github: "https://github.com/Aarteaa/Finanseer",
     description:
-      "A full-stack personal finance management application that tracks expenses, manages budgets, and visualizes spending patterns. Includes an ML-based trend prediction module to forecast future expenses and support data-driven financial decision-making.",
-    technologies: ["Python", "Machine Learning", "React", "MongoDB"],
+      "Full-stack personal finance management application with ML-based trend prediction.",
+    technologies: ["React", "Python", "Machine Learning", "MongoDB"],
   },
   {
-    title: "Labor Supply Chain Management System",
+    title: "Labor Supply Chain Management",
     image: chain,
+    github: "https://github.com/Aarteaa/labor-supply-chain-management",
     description:
-      "Developed an end-to-end labor forecasting and optimization workflow using Python and SQL. Performed data preprocessing, exploratory analysis, predictive modeling, and KPI reporting to improve workforce allocation and operational efficiency.",
+      "End-to-end labor forecasting and optimization workflow using Python and SQL.",
     technologies: ["Python", "Pandas", "SQL", "Data Analytics"],
   },
 ];
-
-
-/* ===========================
-   CONTACT SECTION
-=========================== */
-
-export const CONTACT = {
-  phoneNo: "+91 9324882076",
-  email: "artinavale05@gmail.com",
-};
-
