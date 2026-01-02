@@ -82,11 +82,6 @@ export const EXPERIENCES = [
    PROJECTS SECTION
 =========================== */
 
-import color from "../assets/color.png";
-import Bank from "../assets/bank.png";
-import project7 from "../assets/finanseer.png";
-import chain from "../assets/chain.png";
-
 export const PROJECTS = [
   {
     title: "PaletteIQ",
