@@ -4,10 +4,7 @@ import project3 from "../assets/projects/project-3.jpg";
 import project4 from "../assets/projects/project-4.jpg";
 import project5 from "../assets/projects/project-5.jpg";
 import project6 from "../assets/projects/project-6.jpg";
-import project7 from "../assets/projects/project-7.jpg";
 import project8 from "../assets/projects/project-8.jpg";
-import Bank from "/decor/Bank.jpg";
-import chain from "/decor/chain.jpg";
 import project9 from "../assets/projects/project-9.jpg";
 
 
