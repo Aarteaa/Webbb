@@ -56,7 +56,7 @@ export const EXPERIENCES = [
   },
   {
     year: "Sep 2025 – Feb 2026",
-    role: "Data Analyst Intern",
+    role: "Operations & Data Intern",
     company: "Shrinath Contractor (Manpower Sourcing Company), Mumbai",
     description:`Designed and maintained workforce data pipelines using Excel and internal databases, enabling real-time operational reporting for 100+ contract employees. Automated attendance tracking and workforce allocation reporting, cutting recurring manual effort by 4–5 hours per week. Standardised data entry and documentation workflows, improving data accuracy and audit readiness for manpower sourcing contracts.`,
     technologies: ["Data Analysis", "Excel"],
