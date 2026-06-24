@@ -37,15 +37,16 @@ const Projects = () => {
             className="w-full lg:w-1/2 px-6"
           >
             {/* CLICKABLE TITLE */}
-            <a
-              href={project.live || project.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mb-4 inline-block text-3xl font-semibold text-purple-400 hover:underline hover:text-purple-300 transition"
-            >
+          <a
+            href={project.live ? project.live : project.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block"
+          >
+          <h3 className="mb-4 text-3xl font-semibold text-purple-400 hover:underline hover:text-purple-300 transition cursor-pointer">
               {project.title}
-            </a>
-
+            </h3>
+          </a>
             <p className="mb-6 text-xl text-neutral-300">
               {project.description}
             </p>

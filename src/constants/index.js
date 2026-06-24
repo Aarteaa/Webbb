@@ -55,11 +55,14 @@ export const EXPERIENCES = [
     technologies: ["Market Research", "Excel", "Data Analysis"],
   },
   {
-    year: "Jan 2025 – Feb 2025",
+    year: "Sep 2025 – Feb 2026",
     role: "Data Analyst Intern",
     company: "Shrinath Pathsanstha (Small Finance Bank)",
-    description: `Automated financial transaction and cash flow tracking using Power BI dashboards, reducing manual reporting time by 40%. Cleaned and validated datasets using SQL and Excel, reducing reporting errors by 20%. Analyzed loan, deposit, and customer data to identify growth opportunities.`,
-    technologies: ["Power BI", "SQL", "Excel"],
+    description: ` Designed and maintained workforce data pipelines using Excel and internal databases, enabling real-time operational
+reporting for 100+ contract employees.Automated attendance tracking and workforce allocation reporting, cutting recurring manual effort by an estimated
+4–5 hours per week.Standardised data entry and documentation workflows, improving data accuracy and audit readiness for manpower
+sourcing contracts.`,
+    technologies: ["Data Analysis", "Excel"],
   },
   {
     year: "Oct 2024 – Jul 2025",
@@ -89,40 +92,59 @@ export const PROJECTS = [
     live: "https://paletteiq.streamlit.app",
     github: "https://github.com/Aarteaa/PaletteIQ",
     description:
-      "Implemented facial skin segmentation and Hue–Value–Chroma based skin tone classification aligned with professional colour analysis theory.",
+      "AI-powered fashion color analysis platform using MediaPipe and OpenCV. Implements lighting-robust skin tone analysis using HSV/LAB color spaces and Hue–Value–Chroma theory.",
     technologies: [
-      "K-means clustering",
       "MediaPipe",
-      "Computer Vision",
+      "OpenCV",
       "HSV/LAB",
-      "Python",
-      "ML",
+      "K-Means",
+      "Computer Vision",
       "Streamlit",
     ],
   },
   {
-    title: "Bank Stress Testing Model",
+    title: "Bank Stress Testing ML Model",
     image: Bank,
     live: "https://bank-stress-testing.streamlit.app",
     github: "https://github.com/Aarteaa/bank-stress-testing",
     description:
-      "Developed ML-based stress testing framework using Random Forest and Gradient Boosting (R² = 0.95).",
-    technologies: ["Python", "ML", "Scikit-learn", "Streamlit"],
+      "ML-based stress testing framework using Random Forest and Gradient Boosting (R² = 0.95), simulating NPL ratios under Basel III aligned macroeconomic scenarios.",
+    technologies: [
+      "Random Forest",
+      "Gradient Boosting",
+      "ML",
+      "Basel III",
+      "Streamlit",
+    ],
   },
   {
     title: "Finanseer",
     image: project7,
-    github: "https://github.com/Aarteaa/Finanseer",
+    github: null, // no public link yet
+    live: null,
     description:
-      "Full-stack personal finance management application with ML-based trend prediction.",
+      "Full-stack personal finance management application with expense tracking, budgeting, and ML-based expense trend forecasting.",
     technologies: ["React", "Python", "Machine Learning", "MongoDB"],
   },
   {
     title: "Labor Supply Chain Management",
     image: chain,
+    live: "https://github.com/Aarteaa/labor-supply-chain-management",
     github: "https://github.com/Aarteaa/labor-supply-chain-management",
     description:
-      "End-to-end labor forecasting and optimization workflow using Python and SQL.",
+      "End-to-end labor forecasting and optimization system using Python, SQL, and analytics-driven KPI reporting.",
     technologies: ["Python", "Pandas", "SQL", "Data Analytics"],
   },
 ];
+
+
+
+/* ===========================
+   CONTACT SECTION
+=========================== */
+
+export const CONTACT = {
+  phoneNo: "+91 9324882076",
+  email: "artinavale05@gmail.com",
+};
+
