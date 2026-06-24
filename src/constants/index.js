@@ -6,6 +6,15 @@ import project5 from "../assets/projects/project-5.jpg";
 import project6 from "../assets/projects/project-6.jpg";
 import project8 from "../assets/projects/project-8.jpg";
 import project9 from "../assets/projects/project-9.jpg";
+/* ===========================
+   PROJECTS SECTION
+=========================== */
+
+const color = "/decor/Color.jpg";
+const Bank = "/decor/Bank.jpg";
+const project7 = "/decor/Bank.jpg";
+const chain = "/decor/chain.jpg";
+
 
 
 /* ===========================
